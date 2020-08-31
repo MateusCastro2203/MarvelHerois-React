@@ -20,22 +20,10 @@ const Herois = () => {
 
     useEffect(async () =>{
         const result = await  fetch(`https://gateway.marvel.com:443/v1/public/characters?orderBy=name&limit=12&ts=${timestamp}&apikey=${keyPublic}&hash=${md5.toString()}`).then(response => response.json())
+        console.log(`https://gateway.marvel.com:443/v1/public/characters?orderBy=name&limit=12&ts=${timestamp}&apikey=${keyPublic}&hash=${md5.toString()}`)
         console.log(result.data.results)
         setHerois(result.data.results);
     }, []);
-
-    function modalHerois  (name){
-        return(
-            <Modal {...name} size="lg" centered>
-                <ModalHeader>
-                <Modal.Title id="contained-modal-title-vcenter">
-                    {name}
-                </Modal.Title>
-                </ModalHeader>
-            </Modal>
-        )
-    }
-    const [modalShow, setModalShow] = React.useState(false);
     return(
         
             <div id="herois">
@@ -43,14 +31,11 @@ const Herois = () => {
                     <div className="personagem">
                         <img src={heroi.thumbnail.path+"."+heroi.thumbnail.extension} alt=""/>
                         <h2 key={index}> {heroi.name} </h2> 
-                        <Button color="primary" onClick={() => setModalShow(true)}><KeyboardArrowDownIcon color="secondary" style={{fontSize:50}}></KeyboardArrowDownIcon></Button>
+                        <Button  ><KeyboardArrowDownIcon color="secondary" style={{fontSize:50}}></KeyboardArrowDownIcon></Button>
                         
                     </div>
                 ))}
-                < modalHerois
-                    show={modalShow}
-                    onHide={() => setModalShow(false)}
-                />
+
             </div>
     )
     
