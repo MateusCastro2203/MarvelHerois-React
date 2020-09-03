@@ -5,8 +5,8 @@ import './herois.css'
 import 'bootstrap'
 import { Button } from '@material-ui/core'
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
-import Modal from 'react-bootstrap/Modal'
-import ModalHeader from 'react-bootstrap/ModalHeader'
+import Modal from "react-modal";
+import Content from '../Modal/Content'
 
 const Herois = () => {
     // variaveis para conectar na API da Marvel
@@ -17,45 +17,44 @@ const Herois = () => {
     var md5 = Crypto.MD5(timestamp+keyPrivate+keyPublic);
     
     const [herois, setHerois] = useState([]);
+    const [person,setHeroi] = useState([]);
+    const [isModalOpen, setModalOpen] = useState(false);
 
     useEffect(async () =>{
         const result = await  fetch(`https://gateway.marvel.com:443/v1/public/characters?orderBy=name&limit=12&ts=${timestamp}&apikey=${keyPublic}&hash=${md5.toString()}`).then(response => response.json())
         console.log(`https://gateway.marvel.com:443/v1/public/characters?orderBy=name&limit=12&ts=${timestamp}&apikey=${keyPublic}&hash=${md5.toString()}`)
-        console.log(result.data.results)
         setHerois(result.data.results);
     }, []);
+
+    const openModal = (heroi) =>{
+        setHeroi(heroi)
+        setModalOpen(true);
+    }
+    const closeModal = () => {
+        setModalOpen(false)
+    }
+    
     return(
-        
             <div id="herois">
                 {herois.map((heroi, index) => (
                     <div className="personagem">
                         <img src={heroi.thumbnail.path+"."+heroi.thumbnail.extension} alt=""/>
-                        <h2 key={index}> {heroi.name} </h2> 
-                        <Button  ><KeyboardArrowDownIcon color="secondary" style={{fontSize:50}}></KeyboardArrowDownIcon></Button>
+                        <h2 id="nameHero" key={index}> {heroi.name} </h2> 
+                        <p id='info'>More</p>
+                        <Button onClick={() => openModal(heroi)} ><KeyboardArrowDownIcon color="secondary" style={{fontSize:50}}></KeyboardArrowDownIcon></Button>
                         
                     </div>
                 ))}
-
+                <Modal id='modal'
+                 isOpen={isModalOpen}
+                 ariaHideApp={false}
+                >
+                <Content heroi={person}></Content>
+                <button onClick={() =>closeModal()}>Close modal</button>
+                </Modal>
+                
             </div>
     )
-    
-    // Conexão na API da Marvel para buscar todos os Herois
-         
-    
-   /* return (
-        
-        <div className="container">
-             <form id='form' >
-                <input type="text" placeholder="Enter the name of the hero" id='nameHero'/>
-                <input id="search" type="submit" value="Search"/>
-            </form>
-            <p></p>
-            
-            <div id='herois' className="themed-container">
-            </div>
-        </div>
-    )
-    */
 }
 
 export default Herois

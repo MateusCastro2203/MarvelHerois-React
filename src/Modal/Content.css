@@ -1,0 +1,46 @@
+@font-face{
+    src: local('Marvel'),
+    url('../fonts/marvel.bold.ttf');
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto;
+    
+}
+
+#name{
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Marvel';
+}
+
+#photo{
+    padding: 10px; 
+    width: 30em;
+    height: 400px;
+}
+#titleDescriprion{
+    color: #ffff;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+#description{
+    padding: 10px; 
+    color: #ffff;
+    text-shadow: rgba(253, 12, 12, 0.527);
+}
+
+
+@media only screen and (max-width: 787px) { 
+    .container{
+        margin: 0 auto;
+        grid-template-columns: auto;
+    }
+    #photo{
+    padding: 0px;
+    width: 100%;
+    height: 400px;
+    }
+}

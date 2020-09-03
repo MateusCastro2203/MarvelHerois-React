@@ -2,28 +2,18 @@
     src: local('Marvel'),
     url('../fonts/marvel.bold.ttf');
 }
-.container{
-    width: 94%;
-    
-    margin-right: auto;
-    margin-left: auto;
-}
+
 #form{
     text-align: center;
     
 }
 #nameHero {
-    background-color: black;
     color: #ffff;
     font-size: 30px;
     font-family: 'Marvel';
     border: none;
-    border-bottom: 2px solid red;
-    
 }
-h2{
-    color: white;
-}
+
 #search{
     margin-left: 10px;
     color: rgb(255, 255, 255);
@@ -75,13 +65,15 @@ h2{
     width: 25em;
     height: 400px;
 }
-.personagem h2{
-    color: white;
-    text-transform: uppercase;
+#info{
+    color: rgba(133, 129, 129, 0.699);
+    margin-bottom: 0px;
 }
-.personagem p {
-    color: white;
+
+#modal{
+    background-color: rgba(245, 40, 40, 0.932);
 }
+
 
 @media only screen and (min-width: 1217px) and (max-width: 1616px){
     #herois{
@@ -100,6 +92,6 @@ h2{
         grid-template-columns: auto;
     }
     .personagem img{
-    width: 100%;
+    width: 90%;
     }
 }
