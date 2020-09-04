@@ -1,0 +1,12 @@
+.letter{
+    text-transform: uppercase;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: large;
+    padding: 10px;
+}
+.letter:hover{
+    color: red;
+    text-shadow:1px 1px #f07979 ;
+}

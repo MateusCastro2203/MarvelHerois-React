@@ -6,9 +6,9 @@ const Content = ({heroi}) => {
     return (
         <div>
             <h1 id='name'>{heroi.name}</h1>
-            <div className="container">
+            <div className="modal">
                 <img id='photo' src={heroi.thumbnail.path+"."+heroi.thumbnail.extension} alt=""/>
-                <p id='description'><h2 id='titleDescriprion'>Description:</h2>{heroi.description}</p>
+                <p id='description'><h2 id='titleDescriprion'>Description:</h2>{heroi.description === "" ? "No description registered" : heroi.description }</p>
             </div>
         </div>
     )
