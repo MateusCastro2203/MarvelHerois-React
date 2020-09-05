@@ -12,19 +12,15 @@ const Request = () => {
     var md5 = Crypto.MD5(timestamp+keyPrivate+keyPublic);
     
     const [herois, setHerois] = useState([]);
+
     const [person,setHeroi] = useState([]);
     const [isModalOpen, setModalOpen] = useState(false);
     const alph = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']; 
-
-    useEffect(async () =>{
-        const result = await fetch(`https://gateway.marvel.com:443/v1/public/characters?orderBy=name&limit=12&ts=${timestamp}&apikey=${keyPublic}&hash=${md5.toString()}`).then(response => response.json())
-        console.log(`https://gateway.marvel.com:443/v1/public/characters?name=iron%20man&ts=${timestamp}&apikey=${keyPublic}&hash=${md5.toString()}`)
-        setHerois(result.data.results);
-    }, []);
-
+    console.log(herois)
     const request = (async (letter) =>{
         const result = await fetch(`https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${letter}&limit=100&ts=${timestamp}&apikey=${keyPublic}&hash=${md5.toString()}`).then(response => response.json())
         setHerois(result.data.results);
+        
     })
 
     return (

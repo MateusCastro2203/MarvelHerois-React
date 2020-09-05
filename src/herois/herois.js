@@ -8,29 +8,27 @@ import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import Modal from "react-modal";
 import Content from '../Modal/Content'
 
-const Herois =  ({heroi}) => {
-    console.log(heroi)
+const Herois =  ({hero}) => {
     // variaveis para conectar na API da Marvel
-    //const keyPublic = '37f91eaebd4facebdc8035f7c753d62b';
-    //const keyPrivate = 'a361d56ebc8828490953812d38eac23b263ddb2b';
+    const keyPublic = '37f91eaebd4facebdc8035f7c753d62b';
+    const keyPrivate = 'a361d56ebc8828490953812d38eac23b263ddb2b';
 
-    //var timestamp = new Date().getTime();
-    //var md5 = Crypto.MD5(timestamp+keyPrivate+keyPublic);
+    var timestamp = new Date().getTime();
+    var md5 = Crypto.MD5(timestamp+keyPrivate+keyPublic);
     
-    //const [herois, setHerois] = useState([]);
-    const [person,setHeroi] = useState([]);
-    const [isModalOpen, setModalOpen] = useState(false);
-
-    /*useEffect(async () =>{
+    const [herois, setHerois] = useState([]);
+    useEffect(async () =>{
         const result = await  fetch(`https://gateway.marvel.com:443/v1/public/characters?orderBy=name&limit=12&ts=${timestamp}&apikey=${keyPublic}&hash=${md5.toString()}`).then(response => response.json())
-        console.log(`https://gateway.marvel.com:443/v1/public/characters?name=iron%20man&ts=${timestamp}&apikey=${keyPublic}&hash=${md5.toString()}`)
         setHerois(result.data.results);
-    }, []);*/
+    }, []);
 
+    const [person,setHeroi] = useState([]);
     const openModal = (heroi) =>{
         setHeroi(heroi)
         setModalOpen(true);
     }
+    const [isModalOpen, setModalOpen] = useState(false);
+    
     const closeModal = () => {
         setModalOpen(false)
     }
@@ -38,6 +36,7 @@ const Herois =  ({heroi}) => {
     return(
         <div id="herois">
         {
+            herois.map((heroi)=>(
             <div className="personagem">
                 <img src={heroi.thumbnail.path+"."+heroi.thumbnail.extension} alt=""/>
                 <h2 id="nameHero"> {heroi.name} </h2> 
@@ -45,6 +44,7 @@ const Herois =  ({heroi}) => {
                 <Button onClick={() => openModal(heroi)} ><KeyboardArrowDownIcon color="secondary" style={{fontSize:50}}></KeyboardArrowDownIcon></Button>
                 
             </div>
+            ))
         }
         <Modal id='modal'
          isOpen={isModalOpen}
