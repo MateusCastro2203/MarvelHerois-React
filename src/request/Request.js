@@ -58,7 +58,7 @@ const Request = () => {
                 }
             </div>
             <div id="notFoudHero">
-                <h1>{herois.length === 0 ? "Not foud Hero": "" }</h1>
+                <h1>{herois.length === 0 ? "HERO NOT FOUND": "" }</h1>
             </div>
         </div>
     )
