@@ -11,7 +11,7 @@
 }
 
 #name{
-    color: white;
+    color: rgb(10, 10, 10);
     text-align: center;
     text-transform: uppercase;
     font-family: 'Marvel';
@@ -23,7 +23,7 @@
     height: 400px;
 }
 #titleDescriprion{
-    color: #ffff;
+    color: rgb(10, 10, 10);
     text-align: left;
     text-transform: uppercase;
     font-size: 30px;
@@ -31,7 +31,7 @@
 
 #description{
     padding: 10px; 
-    color: #ffff;
+    color: rgb(7, 7, 7);
     text-shadow: rgba(253, 12, 12, 0.527);
     font-size: 30px;
 }
