@@ -4,7 +4,7 @@ import '../Modal/Content.css'
 const Content = ({heroi}) => {
     console.log(heroi);
     return (
-        <div>
+        <div className="body">
             <h1 id='name'>{heroi.name}</h1>
             <div className="modal">
                 <img id='photo' src={heroi.thumbnail.path+"."+heroi.thumbnail.extension} alt=""/>
