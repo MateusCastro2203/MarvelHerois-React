@@ -2,9 +2,7 @@
     src: local('Marvel'),
     url('../fonts/marvel.bold.ttf');
 }
-.body{
-    background-color: black;
-}
+
 .modal{
     display: grid;
     grid-template-columns: auto auto;
