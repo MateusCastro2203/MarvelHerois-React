@@ -19,7 +19,7 @@ const Header = () => {
             <div id='logo'>
                 <img src="https://seeklogo.com/images/M/Marvel_Comics-logo-D489AEB9C1-seeklogo.com.png" alt=""/>
             </div>
-           <Request></Request>
+           
         </div>
     )
 }
