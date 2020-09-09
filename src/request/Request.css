@@ -21,7 +21,6 @@
     grid-template-columns: auto auto auto auto;
     grid-gap: 10px;
     text-align: center;
-    
 }
 .found{
     display: flex;
@@ -95,12 +94,14 @@
     #form {
         display: flex;
         flex-direction: row-reverse;
+        padding-left: 0;
     }
     #form input{
-        font-size: 20px;
+        font-size: 15px;
+        
     }
     #form button{
-        font-size: 20px;
+        font-size: 15px;
     }
 }
 
