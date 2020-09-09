@@ -30,10 +30,6 @@
     margin-bottom: 0px;
 }
 
-#modal{
-    background-color: rgba(245, 40, 40, 0.932);
-}
-
 @media only screen and (max-width: 787px) { 
   
     .personagem img{
