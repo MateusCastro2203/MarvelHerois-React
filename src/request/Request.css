@@ -69,6 +69,13 @@
     text-transform: uppercase;
     text-shadow:1px 1px #ee4b4b
 }
+.load{
+    width: 100%;
+}
+.load Loading{
+    margin: o auto;
+}
+
 @media only screen and (min-width: 1217px) and (max-width: 1616px){
     #herois{
         grid-template-columns: auto auto auto;

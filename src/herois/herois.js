@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import Crypto from 'crypto-js'
 import  '@material-ui/core'
 import './herois.css'
 import 'bootstrap'
