@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.fd7ca261.chunk.css",
-    "main.js": "/static/js/main.3b10ddaf.chunk.js",
-    "main.js.map": "/static/js/main.3b10ddaf.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.83c3e0c4.js",
-    "runtime-main.js.map": "/static/js/runtime-main.83c3e0c4.js.map",
-    "static/css/2.11829350.chunk.css": "/static/css/2.11829350.chunk.css",
-    "static/js/2.027eaba0.chunk.js": "/static/js/2.027eaba0.chunk.js",
-    "static/js/2.027eaba0.chunk.js.map": "/static/js/2.027eaba0.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.9417d38b1055bbbd312969849f4f236c.js": "/precache-manifest.9417d38b1055bbbd312969849f4f236c.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.11829350.chunk.css.map": "/static/css/2.11829350.chunk.css.map",
-    "static/css/main.fd7ca261.chunk.css.map": "/static/css/main.fd7ca261.chunk.css.map",
-    "static/js/2.027eaba0.chunk.js.LICENSE.txt": "/static/js/2.027eaba0.chunk.js.LICENSE.txt",
-    "static/media/Content.css": "/static/media/marvel.bold.01bd3cca.ttf"
+    "main.css": "/Marvel-Hero/static/css/main.43013be8.chunk.css",
+    "main.js": "/Marvel-Hero/static/js/main.e991c89e.chunk.js",
+    "main.js.map": "/Marvel-Hero/static/js/main.e991c89e.chunk.js.map",
+    "runtime-main.js": "/Marvel-Hero/static/js/runtime-main.e1fa4ee2.js",
+    "runtime-main.js.map": "/Marvel-Hero/static/js/runtime-main.e1fa4ee2.js.map",
+    "static/css/2.11829350.chunk.css": "/Marvel-Hero/static/css/2.11829350.chunk.css",
+    "static/js/2.027eaba0.chunk.js": "/Marvel-Hero/static/js/2.027eaba0.chunk.js",
+    "static/js/2.027eaba0.chunk.js.map": "/Marvel-Hero/static/js/2.027eaba0.chunk.js.map",
+    "index.html": "/Marvel-Hero/index.html",
+    "precache-manifest.c3565a01fb6f52e90df249b969c854a4.js": "/Marvel-Hero/precache-manifest.c3565a01fb6f52e90df249b969c854a4.js",
+    "service-worker.js": "/Marvel-Hero/service-worker.js",
+    "static/css/2.11829350.chunk.css.map": "/Marvel-Hero/static/css/2.11829350.chunk.css.map",
+    "static/css/main.43013be8.chunk.css.map": "/Marvel-Hero/static/css/main.43013be8.chunk.css.map",
+    "static/js/2.027eaba0.chunk.js.LICENSE.txt": "/Marvel-Hero/static/js/2.027eaba0.chunk.js.LICENSE.txt",
+    "static/media/Content.css": "/Marvel-Hero/static/media/marvel.bold.01bd3cca.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.83c3e0c4.js",
+    "static/js/runtime-main.e1fa4ee2.js",
     "static/css/2.11829350.chunk.css",
     "static/js/2.027eaba0.chunk.js",
-    "static/css/main.fd7ca261.chunk.css",
-    "static/js/main.3b10ddaf.chunk.js"
+    "static/css/main.43013be8.chunk.css",
+    "static/js/main.e991c89e.chunk.js"
   ]
 }
