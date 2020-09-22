@@ -18,6 +18,7 @@ const Request = () => {
     useEffect(async () =>{
         const result = await  fetch(`https://gateway.marvel.com:443/v1/public/characters?orderBy=name&limit=12&ts=${timestamp}&apikey=${keyPublic}&hash=${md5.toString()}`).then(response => response.json())
         setHerois(result.data.results);
+        console.log(`https://gateway.marvel.com:443/v1/public/characters?orderBy=name&limit=12&ts=${timestamp}&apikey=${keyPublic}&hash=${md5.toString()}`);
         setLoading(true);
     }, []);
 
@@ -55,7 +56,7 @@ const Request = () => {
                         
                     </div>
                 </div>
-            <hr/>
+            <hr></hr>
             <br></br>
             {loading? 
                 <div id="herois">

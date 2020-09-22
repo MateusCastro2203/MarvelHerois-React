@@ -2,7 +2,9 @@
     src: local('Marvel'),
     url('../fonts/marvel.bold.ttf');
 }
-
+Modal{
+    background-color: black;
+}
 
 #nameHero {
     color: #ffff;
@@ -39,5 +41,10 @@
         background-color: black;
         border: none;
         margin-left: 90%;
+    }
+    Modal{
+        width: 780px;
+        left: 0px;
+        right: 0px;
     }
 }

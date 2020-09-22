@@ -31,7 +31,7 @@ const Herois =  ({hero}) => {
                 <Button onClick={() => openModal(hero)} ><KeyboardArrowDownIcon color="secondary" style={{fontSize:50}}></KeyboardArrowDownIcon></Button>
             </div>
         }
-        <Modal id='modal'
+        <Modal 
          isOpen={isModalOpen}
          ariaHideApp={false}
         >

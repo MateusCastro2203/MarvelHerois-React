@@ -3,6 +3,9 @@
     url('../fonts/marvel.bold.ttf');
 }
 
+hr{
+    background-color: rgb(253, 0, 0);
+}
 .letter{
     text-transform: uppercase;
     color: white;
