@@ -9,6 +9,15 @@ import Modal from "react-modal";
 import Content from '../Modal/Content'
 
 const Herois =  ({hero}) => {
+    const customStyles = {
+        content : {
+          
+          left                  : '0px',
+          right                 : '0px',
+          padding               : '10px',
+          background            : '#000',
+        }
+      };
     const [person,setHeroi] = useState([]);
 
     const openModal = (heroi) =>{
@@ -34,6 +43,7 @@ const Herois =  ({hero}) => {
         <Modal 
          isOpen={isModalOpen}
          ariaHideApp={false}
+         style={customStyles}
         >
             <button onClick={() =>closeModal()} id="close"><Close color="secondary"></Close></button>
             <Content heroi={person}></Content>

@@ -26,8 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -b source -d build"
   },
   "homepage": "https://mateuscastro2203.github.io/MarvelHerois-React",
   "eslintConfig": {
